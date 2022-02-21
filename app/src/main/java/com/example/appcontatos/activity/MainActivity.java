@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Metodo da tela inicial que deixa o texto Contatos por 2 segundos
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

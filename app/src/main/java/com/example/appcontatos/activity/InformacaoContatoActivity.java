@@ -28,6 +28,8 @@ public class InformacaoContatoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacao_contato);
 
+        //Adicionando um ViewHolder para os componentes do contato
+
         mViewHolder.bt_modificar = findViewById(R.id.bt_detalhesContato);
         mViewHolder.bt_editar = findViewById(R.id.bt_detalhesContato_editar);
         mViewHolder.bt_cancelar = findViewById(R.id.bt_detalhesContato_cancelar);
@@ -39,6 +41,7 @@ public class InformacaoContatoActivity extends AppCompatActivity {
         mViewHolder.et_email = findViewById(R.id.et_detalhesContato_email);
         mViewHolder.bt_ligar = findViewById(R.id.bt_ligar);
 
+        //Botão deletar contato
         mViewHolder.bt_deletar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,7 @@ public class InformacaoContatoActivity extends AppCompatActivity {
             }
         });
 
+        //Botão cancelar ação
         mViewHolder.bt_cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +67,7 @@ public class InformacaoContatoActivity extends AppCompatActivity {
             }
         });
 
+        //Botão editar contato
         mViewHolder.bt_editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +88,7 @@ public class InformacaoContatoActivity extends AppCompatActivity {
             }
         });
 
+        //Botão modificar modo de exibição
         mViewHolder.bt_modificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +97,7 @@ public class InformacaoContatoActivity extends AppCompatActivity {
             }
         });
 
+        //Botão efetuar chamada
         mViewHolder.bt_ligar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +120,7 @@ public class InformacaoContatoActivity extends AppCompatActivity {
 
     }
 
+    //Método para carregar dados dos Contatos
     private void CarregarDadosContato(){
         Cursor c = db.SelectByID_Contato(id);
         c.moveToFirst();
@@ -133,6 +141,8 @@ public class InformacaoContatoActivity extends AppCompatActivity {
         }
     }
 
+    //Função para desabilitar edição do contato
+
     private void DisabledEdicao(){
 
         mViewHolder.et_nome.setEnabled(false);
@@ -143,6 +153,8 @@ public class InformacaoContatoActivity extends AppCompatActivity {
         mViewHolder.ll_botoes.setVisibility(View.GONE);
         mViewHolder.bt_modificar.setVisibility(View.VISIBLE);
     }
+
+    //Função para habilitar edição do contato
 
     private void EnabledEdicao(){
 
@@ -156,6 +168,7 @@ public class InformacaoContatoActivity extends AppCompatActivity {
 
     }
 
+    //Método para identificar o ViewHolder
     private class ViewHolder{
         EditText et_nome, et_endereco, et_telefone, et_email;
         Button bt_editar, bt_deletar, bt_cancelar, bt_modificar;

@@ -1,3 +1,6 @@
+//OBS: Essa classe foi usada apenas para testes ao adicionar os items da lista antes de ter a base
+//de dados
+
 package com.example.appcontatos;
 
 import com.example.appcontatos.model.Contato;

@@ -41,6 +41,7 @@ public class ContatoListaAdapter extends RecyclerView.Adapter<ContatoListaViewHo
         Contato contato = listaContatos.get(position);
         holder.bindData(contato);
 
+        //Metodo para mostrar os detalhes do contato ao selecionar o item na lista
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

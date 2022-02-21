@@ -49,6 +49,7 @@ public class ListaContatosActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mViewHolder.rv.setLayoutManager(linearLayoutManager);
 
+        //Metodo que acionar o botão para ir a tela de novo contato
         mViewHolder.bt_novo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +59,7 @@ public class ListaContatosActivity extends AppCompatActivity {
         });
     }
 
+    //Metodo que lista os contatos da base de dados
     private void listarContatos() {
         Cursor c = db.SelectAll_Contato();
         c.moveToFirst();
@@ -82,11 +84,14 @@ public class ListaContatosActivity extends AppCompatActivity {
         mViewHolder.rv.setLayoutManager(linearLayoutManager);
     }
 
+    //Metodo ViewHolder
+
     private class ViewHolder{
         Button bt_novo;
         RecyclerView rv;
     }
 
+    //Metodo override para fazer as verificações da modicações da lista
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

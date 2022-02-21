@@ -20,6 +20,7 @@ public class ContatoListaViewHolder extends RecyclerView.ViewHolder {
         tv_telefone = itemView.findViewById(R.id.rv_item_telefone);
     }
 
+    //Metodo para mostrar apenas os elementos nome e telefone na lista de contatos
     public void bindData(Contato contato) {
         tv_nome.setText(contato.getNome());
         tv_telefone.setText(contato.getTelefone());

@@ -34,6 +34,7 @@ public class NovoContatoActivity extends AppCompatActivity {
 
         i = getIntent();
 
+        //Botão cancelar as ações
         mViewHolder.bt_cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,6 +43,7 @@ public class NovoContatoActivity extends AppCompatActivity {
             }
         });
 
+        //Metodo para salvar os contatos na base de dados
         mViewHolder.bt_salvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
