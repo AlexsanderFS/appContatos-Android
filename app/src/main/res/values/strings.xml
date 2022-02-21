@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Contatos</string>
+    <string name="contatos">Contatos</string>
+    <string name="novo_contato">Novo Contato</string>
+    <string name="nome">Nome</string>
+    <string name="endereco">Endereco</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">Email</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="detalhes_do_contato">Detalhes do Contato</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="detalhesCancelar">Cancelar</string>
+    <string name="modificar">Modificar</string>
+</resources>

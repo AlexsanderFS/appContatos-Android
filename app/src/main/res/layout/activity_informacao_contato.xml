@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".activity.InformacaoContatoActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="@string/detalhes_do_contato"
+        android:textSize="30sp"
+        android:typeface="serif" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nome"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/et_detalhesContato_nome"
+        android:enabled="false"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/endereco"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/et_detalhesContato_endereco"
+        android:enabled="false"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefone"
+        android:inputType="phone"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/et_detalhesContato_telefone"
+        android:enabled="false"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/et_detalhesContato_email"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/bt_detalhesContato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="@string/modificar"
+        app:cornerRadius="100dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/ll_detalhesContato"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/bt_detalhesContato_cancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="2"
+            android:text="@string/cancelar"
+            app:cornerRadius="50dp" />
+        <Button
+            android:id="@+id/bt_detalhesContato_deletar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="2"
+            android:text="@string/excluir"
+            app:cornerRadius="50dp" />
+        <Button
+            android:id="@+id/bt_detalhesContato_editar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="2"
+            android:text="@string/editar"
+            app:cornerRadius="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_ligar"
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:insetLeft="80dp"
+            android:insetRight="80dp"
+            android:text="Efetuar Chamada" />
+    </LinearLayout>
+
+</LinearLayout>
